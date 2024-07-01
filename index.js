@@ -28,7 +28,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 
-app.use(express.static(keys.STATIC_DIR));
+//app.use(express.static(keys.STATIC_DIR));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   express.json({
