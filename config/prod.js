@@ -9,4 +9,5 @@ module.exports = {
   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
   STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
   price: process.env.PRICE,
+  CLIENT_DOMAIN: process.env.CLIENT_DOMAIN,
 };
