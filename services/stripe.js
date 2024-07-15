@@ -4,7 +4,7 @@ const keys = require('../config/keys');
 const User = mongoose.model('users');
 
 const stripe = require('stripe')(keys.stripeSecretKey, {
-  apiVersion: '2023-10-16',
+  apiVersion: '2024-04-10',
 });
 
 async function createCustomer(userId) {

@@ -10,7 +10,9 @@ export default defineConfig({
       '/auth/google': 'http://localhost:3001',
       '/api/logout': 'http://localhost:3001',
       '/api/create-checkout-session': 'http://localhost:3001',
-      '/webhook': 'http://localhost:3001',
+      '/api/payment/webhook': 'http://localhost:3001',
+      '/api/surveys': 'http://localhost:3001',
+      '/api/survey/webhook': 'http://localhost:3001',
     },
   },
   optimizeDeps: {

@@ -1,17 +1,28 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const passport = require('passport');
 const keys = require('./config/keys');
 const { resolve } = require('path');
+const cors = require('cors');
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 require('./services/stripe');
+require('./services/Mailer');
 
 mongoose.connect(keys.mongoURI);
 
 const app = express();
+
+app.use(
+  cors({
+    origin: keys.CLIENT_DOMAIN, // replace with your client's origin
+    credentials: true,
+  })
+);
 
 app.use(
   session({
@@ -28,20 +39,24 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 
-//app.use(express.static(keys.STATIC_DIR));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   express.json({
     verify: function (req, res, buf) {
-      if (req.originalUrl.startsWith('/api/webhook')) {
+      if (req.originalUrl.startsWith('/api/payment/webhook')) {
         req.rawBody = buf.toString();
       }
     },
   })
 );
 
+app.use(bodyParser.json());
+
 const paymentRoutes = require('./routes/paymentRoutes');
 app.use('/api', paymentRoutes);
+
+const surveyRoutes = require('./routes/surveyRoutes');
+app.use('/api', surveyRoutes);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/dist'));

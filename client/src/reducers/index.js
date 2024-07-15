@@ -1,8 +1,10 @@
 import authReducer from './authReducer';
-//import paymentReducer from './paymentReducer';
+import { pageReducer } from './pageReducer';
+import { surveyReducer } from './surveyReducer';
 import { combineReducers } from 'redux';
 
 export default combineReducers({
   auth: authReducer,
-  //payment: paymentReducer,
+  page: pageReducer,
+  surveys: surveyReducer,
 });

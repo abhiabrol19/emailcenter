@@ -10,4 +10,5 @@ module.exports = {
   STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
   price: process.env.PRICE,
   CLIENT_DOMAIN: process.env.CLIENT_DOMAIN,
+  sendgridKey: process.env.SENDGRID_KEY,
 };

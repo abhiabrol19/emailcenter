@@ -6,11 +6,8 @@ import { connect } from 'react-redux';
 import { fetchUser } from './actions';
 
 import Header from './components/Header';
-
-const Dashboard = () => <h2>Dashboard</h2>;
-
-const SurveyNew = () => <h2>SurveyNew</h2>;
-
+import Dashboard from './components/Dashboard';
+import SurveyNew from './components/surveys/SurveyNew';
 import Landing from './components/Landing';
 
 function App({ fetchUser }) {
@@ -21,7 +18,7 @@ function App({ fetchUser }) {
   return (
     <div className="container">
       <BrowserRouter>
-        <div>
+        <div className="container">
           <Header />
           <Routes>
             <Route path="/" element={<Landing />} />

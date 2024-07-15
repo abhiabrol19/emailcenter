@@ -31,7 +31,7 @@ router.post('/create-checkout-session', async (req, res) => {
 });
 
 router.post(
-  '/webhook',
+  '/payment/webhook',
   bodyParser.raw({ type: 'application/json' }),
   async (req, res) => {
     console.log('Webhook received');
