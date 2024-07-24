@@ -4,7 +4,7 @@ import SurveyList from './surveys/SurveyList';
 function Dashboard() {
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>Emaily Dashboard!</h1>
+      <h1>Hello!</h1>
       Collect feedback from your users
       <div>
         <SurveyList />
