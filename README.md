@@ -25,7 +25,7 @@ The application is built using:
 
 ## LIVE DEMO
 
-Visit https://emaily-8stb.onrender.com/ to access the live demonstration of the app. This is free tier application so might take some additianl time to load due to cold starting containers.
+Visit https://emaily-8stb.onrender.com/ to access the live demonstration of the app. This is free tier application so might take some additional time to load due to cold starting containers.
 
 Once in, Click on 'Login with Google' to sign up. You will be redirected to the /surverys route where you can access the Dashboard functionality.
 
@@ -39,9 +39,11 @@ CVC: 444
 
 You will be redirected back to the dashboard. Click on the '+' icon on the bottom alright of your screen to start a survey.
 
-Fill in the form, use comma seperator for addtioanl email addresses and send the survey.
+Fill in the form, use comma seperator for addtional email addresses and send the survey.
 
-You can also record email responses by clicking yes or no in the email that you receive. This data is then published to the server via webhooks and resposes receied can be accessed on the survey tile once you refresh the window.
+Check your spam folder incase the email is not received in the Inbox.
+
+You can also record email responses by clicking yes or no in the email that you receive. This data is then published to the server via webhooks and resposes received can be seen on the survey tile once you refresh the window.
 
 ## Environment Variables Required:
 
