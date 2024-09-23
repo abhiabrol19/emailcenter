@@ -40,7 +40,7 @@ function Header({ auth, initiateCheckout }) {
 
   return (
     <nav>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper" style={{ backgroundColor: 'royalblue' }}>
         <Link to={auth ? '/surveys' : '/'} className="left brand-logo">
           Emaily
         </Link>
