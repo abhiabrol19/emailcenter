@@ -41,7 +41,7 @@ You will be redirected back to the dashboard. Click on the '+' icon on the botto
 
 Fill in the form, use comma separator for additional email addresses and send the survey.
 
-Check your spam folder incase the email is not received in the Inbox.
+Check your spam folder in case the email is not received in the Inbox.
 
 You can also record email responses by clicking yes or no in the email that you receive. This data is then published to the server via webhooks and resposes received can be seen on the survey tile once you refresh the window.
 
